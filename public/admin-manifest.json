@@ -1,0 +1,35 @@
+{
+  "name": "CabEazy Admin",
+  "short_name": "CabEazy",
+  "description": "CabEazy Admin Dashboard – Manage enquiries and customer leads",
+  "start_url": "/admin",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#F15533",
+  "orientation": "portrait-primary",
+  "scope": "/admin",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Enquiries",
+      "short_name": "Enquiries",
+      "description": "Open enquiries list",
+      "url": "/admin/enquiries",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
