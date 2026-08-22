@@ -4,7 +4,7 @@ import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 export default function FinalCTA() {
   const whatsappUrl = getWhatsAppLink(
-    "Hi CabEazy, I am ready to book a vehicle. Please provide fare and availability."
+    "Hi Cabeazy, I am ready to book a vehicle. Please provide fare and availability."
   );
 
   return (
@@ -22,7 +22,7 @@ export default function FinalCTA() {
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
               Ready to Book Your Vehicle with{" "}
-              <span className="text-brandColor">CabEazy?</span>
+              <span className="text-brandColor">Cabeazy?</span>
             </h2>
 
             <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">

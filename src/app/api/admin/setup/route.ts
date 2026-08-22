@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     const admin = await Admin.create({
       email: email.toLowerCase(),
       password: hashedPassword,
-      name: name || "CabEazy Admin",
+      name: name || "Cabeazy Admin",
     });
 
     return NextResponse.json({

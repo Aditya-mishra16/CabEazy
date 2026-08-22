@@ -10,7 +10,7 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-white border-t border-gray-100 scroll-mt-16">
+    <section id="how-it-works" className="pt-16 pb-8 md:pt-24 md:pb-12 bg-white border-t border-gray-100 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
@@ -25,10 +25,10 @@ export default function HowItWorks() {
             Seamless &amp; Transparent
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-            How Booking Works with <span className="text-brandColor">CabEazy</span>
+            How Booking Works with <span className="text-brandColor">Cabeazy</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
-            Tell us where you need to go. CabEazy arranges your vehicle, assigns an experienced
+            Tell us where you need to go. Cabeazy arranges your vehicle, assigns an experienced
             driver, and ensures a smooth journey from start to finish.
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.5, delay: 0.2, ease: EASE }}
         >
           <a
-            href={getWhatsAppLink("Hi CabEazy, I want to book a ride.")}
+            href={getWhatsAppLink("Hi Cabeazy, I want to book a ride.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-900 hover:bg-black text-white text-xs sm:text-sm font-bold shadow-sm btn-press transition"

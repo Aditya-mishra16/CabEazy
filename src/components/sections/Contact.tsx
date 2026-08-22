@@ -104,7 +104,7 @@ export default function Contact() {
 
         // 2. Build full details WhatsApp message and open
         const whatsappMessage = [
-          `*New Booking Enquiry - CabEazy*`,
+          `*New Booking Enquiry - Cabeazy*`,
           id ? `*Ref ID:* ${id}` : "",
           `*Name:* ${formData.name}`,
           `*Phone:* ${formData.phone}`,
@@ -149,7 +149,7 @@ export default function Contact() {
   )}`;
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-gray-50 border-t border-gray-200/80 scroll-mt-12">
+    <section id="contact" className="pt-14 pb-16 md:pt-18 md:pb-24 bg-gray-50 border-t border-gray-200/80 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
         <motion.div
@@ -163,7 +163,7 @@ export default function Contact() {
             Get in Touch
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-            Book Your Ride with <span className="text-brandColor">CabEazy</span>
+            Book Your Ride with <span className="text-brandColor">Cabeazy</span>
           </h2>
           <p className="mt-4 text-base text-gray-600 leading-relaxed">
             Tell us where you need to go. Fill out the booking enquiry form below or connect with us directly via Phone or WhatsApp.
@@ -184,7 +184,7 @@ export default function Contact() {
             <a
               href={`tel:${siteConfig.phone}`}
               className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-brandColor/40 hover-lift transition group"
-              aria-label={`Call CabEazy at ${siteConfig.phone}`}
+              aria-label={`Call Cabeazy at ${siteConfig.phone}`}
             >
               <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-brandColor/20 flex items-center justify-center flex-shrink-0 group-hover:bg-brandColor group-hover:border-brandColor transition">
                 <Phone className="w-5 h-5 text-brandColor group-hover:text-white transition" />
@@ -202,7 +202,7 @@ export default function Contact() {
 
             {/* Quick contact card: WhatsApp */}
             <a
-              href={getWhatsAppLink("Hi CabEazy, I would like to enquire about vehicle booking.")}
+              href={getWhatsAppLink("Hi Cabeazy, I would like to enquire about vehicle booking.")}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-brandColor/30 shadow-sm hover-lift transition group ring-1 ring-brandColor/10"
@@ -226,7 +226,7 @@ export default function Contact() {
             <a
               href={`mailto:${siteConfig.email}`}
               className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm hover:border-brandColor/40 hover-lift transition group"
-              aria-label={`Email CabEazy at ${siteConfig.email}`}
+              aria-label={`Email Cabeazy at ${siteConfig.email}`}
             >
               <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-brandColor/20 flex items-center justify-center flex-shrink-0 group-hover:bg-brandColor group-hover:border-brandColor transition">
                 <Mail className="w-5 h-5 text-brandColor group-hover:text-white transition" />
@@ -264,7 +264,7 @@ export default function Contact() {
 
               <div className="relative flex-1 min-h-[220px] w-full rounded-xl overflow-hidden border border-gray-200">
                 <iframe
-                  title="CabEazy Location Map"
+                  title="Cabeazy Location Map"
                   src="https://maps.google.com/maps?q=Mumbai-400072,%20Maharashtra,%20India&t=&z=12&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
@@ -303,7 +303,7 @@ export default function Contact() {
                   )}
                   <div className="flex flex-col sm:flex-row gap-3 pt-4 w-full sm:w-auto">
                     <a
-                      href={getWhatsAppLink("Hi CabEazy, I just submitted an enquiry on the website. Please confirm availability.")}
+                      href={getWhatsAppLink("Hi Cabeazy, I just submitted an enquiry on the website. Please confirm availability.")}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 bg-brandColor hover:bg-brandColor-hover text-white px-5 py-3 rounded-xl font-bold text-sm btn-press transition"

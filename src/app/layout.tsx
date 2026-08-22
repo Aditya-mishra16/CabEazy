@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     "Car Hire With Driver",
     "Best Outstation Cab Service",
   ],
-  authors: [{ name: "CabEazy Travel" }],
-  creator: "CabEazy",
-  publisher: "CabEazy",
+  authors: [{ name: "Cabeazy Travel" }],
+  creator: "Cabeazy",
+  publisher: "Cabeazy",
   alternates: {
     canonical: "https://www.cabeazy.in/",
   },
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
         url: "/images/hero-highway.jpg",
         width: 1200,
         height: 630,
-        alt: "CabEazy Vehicle Booking Services",
+        alt: "Cabeazy Vehicle Booking Services",
       },
     ],
   },
@@ -88,9 +88,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  icons: {
-    icon: "/favicon.ico",
   },
   manifest: "/manifest.json",
 };

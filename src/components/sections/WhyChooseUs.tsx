@@ -9,7 +9,7 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-20 md:py-28 bg-white scroll-mt-16">
+    <section id="why-choose-us" className="pt-14 pb-14 md:pt-18 md:pb-20 bg-white scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
@@ -21,13 +21,13 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.6, ease: EASE }}
         >
           <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-brandColor mb-2">
-            The CabEazy Difference
+            The Cabeazy Difference
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-            Why Travelers Choose <span className="text-brandColor">CabEazy</span>
+            Why Travelers Choose <span className="text-brandColor">Cabeazy</span>
           </h2>
           <p className="mt-4 text-base text-gray-600 leading-relaxed">
-            We built CabEazy to solve the frustrations of personal and long-distance road travel &mdash;
+            We built Cabeazy to solve the frustrations of personal and long-distance road travel &mdash;
             unpredictable charges, driver cancellations, and unverified vehicles.
           </p>
         </motion.div>

@@ -1,10 +1,12 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowUpRight } from "lucide-react";
 import { siteConfig, navLinks, servicesData, getWhatsAppLink } from "@/config/site";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const whatsappUrl = getWhatsAppLink("Hi CabEazy, I would like to enquire about vehicle booking / get a quote.");
+  const whatsappUrl = getWhatsAppLink("Hi Cabeazy, I would like to enquire about vehicle booking / get a quote.");
 
   return (
     <footer className="bg-gray-950 text-white relative overflow-hidden border-t border-gray-900" aria-labelledby="footer-heading">
@@ -17,9 +19,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
           {/* COLUMN 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
-            <span className="text-3xl font-black tracking-tight text-white block">
-              Cab<span className="text-brandColor">Eazy</span>
-            </span>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/logo-icon.png"
+                alt="Cabeazy Logo Icon"
+                width={36}
+                height={36}
+                className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 object-contain rounded-xl"
+              />
+              <span className="text-3xl font-black tracking-tight text-white block">
+                Cabeazy
+              </span>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               Reliable vehicle booking and driver assignment platform. Tell us where you need to go, and we arrange a verified chauffeur with a clean, comfortable vehicle for your journey. Available 24/7.
             </p>
@@ -46,33 +57,72 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {navLinks.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="text-gray-400 hover:text-brandColor transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* COLUMN 3: Services */}
+          {/* COLUMN 3: Services & Routes */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">
               Our Services
             </h3>
-            <ul className="space-y-2.5 text-sm">
-              {servicesData.map((service) => (
-                <li key={service.id}>
-                  <a
-                    href="#services"
-                    className="text-gray-400 hover:text-brandColor transition-colors"
-                  >
-                    {service.title}
-                  </a>
-                </li>
-              ))}
+            <ul className="space-y-2.5 text-sm mb-6">
+              {servicesData.map((service) => {
+                const servicePaths: Record<string, string> = {
+                  outstation: "/outstation-cab-booking",
+                  city: "/airport-cab-booking",
+                  rental: "/local-cab-booking",
+                };
+                const href = servicePaths[service.id] || "/#services";
+
+                return (
+                  <li key={service.id}>
+                    <Link
+                      href={href}
+                      className="text-gray-400 hover:text-brandColor transition-colors font-medium"
+                    >
+                      {service.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
+              Popular Routes
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/cab-booking/mumbai"
+                  className="text-gray-400 hover:text-brandColor transition-colors"
+                >
+                  Cabs in Mumbai
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cab-booking/pune"
+                  className="text-gray-400 hover:text-brandColor transition-colors"
+                >
+                  Cabs in Pune
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mumbai-to-pune-cab"
+                  className="text-gray-400 hover:text-brandColor transition-colors font-medium"
+                >
+                  Mumbai to Pune Cab
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -120,18 +170,18 @@ export default function Footer() {
         <div className="pt-8 mt-8 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#services" className="hover:text-gray-400 transition">
+            <Link href="/#services" className="hover:text-gray-400 transition">
               Services
-            </a>
-            <a href="#fleet" className="hover:text-gray-400 transition">
+            </Link>
+            <Link href="/#fleet" className="hover:text-gray-400 transition">
               Vehicles
-            </a>
-            <a href="#faq" className="hover:text-gray-400 transition">
+            </Link>
+            <Link href="/#faq" className="hover:text-gray-400 transition">
               FAQ
-            </a>
-            <a href="#contact" className="hover:text-gray-400 transition">
+            </Link>
+            <Link href="/#contact" className="hover:text-gray-400 transition">
               Contact Support
-            </a>
+            </Link>
           </div>
         </div>
       </div>

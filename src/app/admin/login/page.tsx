@@ -126,7 +126,7 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="text-center text-xs text-gray-600 mt-6">
-          CabEazy Admin Panel &bull; Authorised Access Only
+          Cabeazy Admin Panel &bull; Authorised Access Only
         </p>
       </div>
     </div>

@@ -10,10 +10,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "CabEazy Admin Dashboard",
-    template: "%s | CabEazy Admin",
+    default: "Cabeazy Admin Dashboard",
+    template: "%s | Cabeazy Admin",
   },
-  description: "CabEazy Admin Dashboard — Manage enquiries and customer interactions.",
+  description: "Cabeazy Admin Dashboard — Manage enquiries and customer interactions.",
   robots: { index: false, follow: false },
   manifest: "/admin-manifest.json",
   icons: {

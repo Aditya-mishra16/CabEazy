@@ -15,7 +15,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-20 bg-white border-t border-gray-200/80 scroll-mt-16">
+    <section id="faq" className="pt-12 pb-12 md:pt-16 md:pb-16 bg-white border-t border-gray-200/80 scroll-mt-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* SECTION HEADER */}

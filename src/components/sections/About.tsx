@@ -35,19 +35,19 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-gray-50 border-t border-gray-200/80 scroll-mt-16">
+    <section id="about" className="pt-14 pb-14 md:pt-18 md:pb-20 bg-gray-50 border-t border-gray-200/80 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-brandColor mb-2">
-            About CabEazy
+            About Cabeazy
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
             Reliable Vehicle Booking &amp;{" "}
             <span className="text-brandColor">Driver Assignment</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-            CabEazy is a specialized vehicle booking service designed to make personal, outstation, and corporate road travel predictable, comfortable, and seamless.
+            Cabeazy is a specialized vehicle booking service designed to make personal, outstation, and corporate road travel predictable, comfortable, and seamless.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function About() {
           <div className="lg:col-span-6 relative h-72 sm:h-96 md:h-[420px] rounded-3xl overflow-hidden shadow-lg border border-gray-200 hover-lift">
             <Image
               src="/images/AboutImage.jpg"
-              alt="CabEazy vehicle booking and customer journey comfort"
+              alt="Cabeazy vehicle booking and customer journey comfort"
               fill
               sizes="(max-width: 1024px) 100vw, 550px"
               className="object-cover object-center"
@@ -73,18 +73,18 @@ export default function About() {
           {/* STORY & MISSION */}
           <div className="lg:col-span-6 space-y-6">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
-              How CabEazy Facilitates Your Travel
+              How Cabeazy Facilitates Your Travel
             </h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              When you submit a booking request through CabEazy, our travel team coordinates with our network of experienced, verified chauffeurs. We assign the most suitable driver with a well-maintained vehicle to pick you up at your requested time and safely transport you to your destination.
+              When you submit a booking request through Cabeazy, our travel team coordinates with our network of experienced, verified chauffeurs. We assign the most suitable driver with a well-maintained vehicle to pick you up at your requested time and safely transport you to your destination.
             </p>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Whether you require a one-way outstation transfer, a round-trip family holiday, or a multi-stop city rental, CabEazy eliminates the frustration of driver cancellations and unexpected fare changes.
+              Whether you require a one-way outstation transfer, a round-trip family holiday, or a multi-stop city rental, Cabeazy eliminates the frustration of driver cancellations and unexpected fare changes.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4">
               <a
-                href={getWhatsAppLink("Hi CabEazy, I would like to know more about your services.")}
+                href={getWhatsAppLink("Hi Cabeazy, I would like to know more about your services.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brandColor hover:bg-brandColor-hover text-white px-6 py-3 rounded-xl font-bold text-sm shadow-sm btn-press transition"

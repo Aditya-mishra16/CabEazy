@@ -4,7 +4,7 @@ import { serviceLocations, getWhatsAppLink } from "@/config/site";
 
 export default function ServiceAreas() {
   return (
-    <section id="service-areas" className="py-20 bg-gray-50 border-t border-gray-200/80 scroll-mt-12">
+    <section id="service-areas" className="pt-14 pb-12 md:pt-16 md:pb-14 bg-gray-50 border-t border-gray-200/80 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* LEFT CONTENT */}
@@ -17,7 +17,7 @@ export default function ServiceAreas() {
               <span className="text-brandColor">Mumbai &amp; All Over India</span>
             </h2>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              From our operational headquarters in Mumbai to interconnected network hubs across Maharashtra, Gujarat, Delhi NCR, Karnataka, Rajasthan, Goa, and all across India, CabEazy delivers reliable doorstep cab pickups 24/7.
+              From our operational headquarters in Mumbai to interconnected network hubs across Maharashtra, Gujarat, Delhi NCR, Karnataka, Rajasthan, Goa, and all across India, Cabeazy delivers reliable doorstep cab pickups 24/7.
             </p>
 
             <div className="space-y-3 pt-2 text-left">
@@ -60,7 +60,7 @@ export default function ServiceAreas() {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {serviceLocations.map((loc, idx) => {
                   const whatsappUrl = getWhatsAppLink(
-                    `Hi CabEazy, I want to book a cab for ${loc.name}. Please share availability and quote.`
+                    `Hi Cabeazy, I want to book a cab for ${loc.name}. Please share availability and quote.`
                   );
 
                   return (
@@ -94,7 +94,7 @@ export default function ServiceAreas() {
               <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
                 <span>Need a ride from another location or state in India?</span>
                 <a
-                  href={getWhatsAppLink("Hi CabEazy, do you provide service in my city / state in India?")}
+                  href={getWhatsAppLink("Hi Cabeazy, do you provide service in my city / state in India?")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold text-brandColor hover:underline flex items-center gap-1 btn-press"

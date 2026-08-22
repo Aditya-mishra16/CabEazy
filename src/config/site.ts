@@ -1,10 +1,10 @@
 import { Vehicle, ServiceItem, RouteItem, FAQItem, WhyChooseItem } from "@/types";
 
 export const siteConfig = {
-  name: "CabEazy",
-  legalName: "CabEazy Travel Services",
+  name: "Cabeazy",
+  legalName: "Cabeazy Travel Services",
   description:
-    "Book a vehicle for your journey with CabEazy. Tell us where you need to go, and we will assign an experienced, verified driver to take you safely to your destination. Available 24/7.",
+    "Book a vehicle for your journey with Cabeazy. Tell us where you need to go, and we will assign an experienced, verified driver to take you safely to your destination. Available 24/7.",
   url: process.env.NEXT_PUBLIC_SITE_URL!,
   phone: process.env.NEXT_PUBLIC_PHONE_NUMBER!,
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER!,
@@ -23,18 +23,18 @@ export const siteConfig = {
 
 export const getWhatsAppLink = (message?: string) => {
   const defaultMsg =
-    message || "Hi CabEazy, I would like to enquire about booking a vehicle for my trip.";
+    message || "Hi Cabeazy, I would like to enquire about booking a vehicle for my trip.";
   return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(defaultMsg)}`;
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Services", href: "#services" },
-  { label: "Vehicles", href: "#fleet" },
-  { label: "About", href: "#about" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Services", href: "/#services" },
+  { label: "Vehicles", href: "/#fleet" },
+  { label: "About", href: "/#about" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const howItWorksSteps = [
@@ -52,7 +52,7 @@ export const howItWorksSteps = [
   },
   {
     step: "03",
-    title: "CabEazy Assigns a Driver",
+    title: "Cabeazy Assigns a Driver",
     description:
       "We match your booking with a verified, experienced chauffeur and dispatch a clean, well-maintained vehicle.",
   },
@@ -70,7 +70,7 @@ export const servicesData: ServiceItem[] = [
     title: "Intercity Outstation Travel",
     tagline: "One-Way Drops & Round-Trip Journeys",
     description:
-      "Reliable long-distance vehicle bookings. Tell us your destination, and CabEazy will assign a seasoned highway chauffeur for a comfortable, stress-free trip.",
+      "Reliable long-distance vehicle bookings. Tell us your destination, and Cabeazy will assign a seasoned highway chauffeur for a comfortable, stress-free trip.",
     iconName: "MapPin",
     highlights: [
       "Flexible one-way drops and round-trip packages",
@@ -172,7 +172,7 @@ export const whyChooseData: WhyChooseItem[] = [
   {
     title: "Verified & Professional Drivers",
     description:
-      "CabEazy assigns experienced, background-verified chauffeurs trained for safe, smooth driving.",
+      "Cabeazy assigns experienced, background-verified chauffeurs trained for safe, smooth driving.",
     icon: "/icons/drivers.svg",
     stat: "Verified Chauffeurs",
   },
@@ -194,9 +194,9 @@ export const whyChooseData: WhyChooseItem[] = [
 
 export const faqsData: FAQItem[] = [
   {
-    question: "How does booking through CabEazy work?",
+    question: "How does booking through Cabeazy work?",
     answer:
-      "Booking is simple: Tell us your pickup location, destination, and preferred vehicle class. CabEazy matches your trip with a suitable verified driver, confirms your upfront quote, and the assigned driver picks you up right on time.",
+      "Booking is simple: Tell us your pickup location, destination, and preferred vehicle class. Cabeazy matches your trip with a suitable verified driver, confirms your upfront quote, and the assigned driver picks you up right on time.",
   },
   {
     question: "What vehicle categories are available for booking?",
@@ -224,7 +224,7 @@ export const faqsData: FAQItem[] = [
       "No. We do not apply dynamic surge multipliers. Once your quote is confirmed, you travel with complete clarity.",
   },
   {
-    question: "How can I contact CabEazy if I need assistance?",
+    question: "How can I contact Cabeazy if I need assistance?",
     answer:
       "Our human support desk is available 24/7 via direct phone call (+91 9323913610) and WhatsApp for immediate travel coordination.",
   },

@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Phone, MessageCircle, Menu, X } from "lucide-react";
 import { siteConfig, navLinks, getWhatsAppLink } from "@/config/site";
 
@@ -21,13 +23,14 @@ export default function Header() {
     };
   }, [mobileMenuOpen]);
 
-  const whatsappUrl = getWhatsAppLink("Hi CabEazy, I would like to enquire about vehicle booking.");
+  const whatsappUrl = getWhatsAppLink("Hi Cabeazy, I would like to enquire about vehicle booking.");
   const closeMenu = () => setMobileMenuOpen(false);
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("#")) {
+    const isHomePage = window.location.pathname === "/";
+    if (href.startsWith("/#") && isHomePage) {
       e.preventDefault();
-      const targetId = href.replace("#", "");
+      const targetId = href.replace("/#", "");
       if (targetId === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
@@ -61,27 +64,37 @@ export default function Header() {
           {/* 2-column flex layout: Logo on left, Navigation + CTAs on right */}
           <nav className="flex items-center justify-between gap-6" aria-label="Main Navigation">
             {/* LEFT: Brand Logo */}
-            <a
-              href="#home"
-              onClick={(e) => handleSmoothScroll(e, "#home")}
+            <Link
+              href="/#home"
+              onClick={(e) => handleSmoothScroll(e, "/#home")}
               className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-brandColor rounded-lg group"
-              aria-label="CabEazy Home"
+              aria-label="Cabeazy Home"
             >
-              <span
-                className={`text-2xl sm:text-3xl font-black tracking-tight transition-colors ${
-                  scrolled ? "text-gray-900" : "text-white"
-                }`}
-              >
-                Cab<span className="text-brandColor group-hover:text-brandColor-hover transition-colors">Eazy</span>
-              </span>
-            </a>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/images/logo-icon.png"
+                  alt="Cabeazy Logo Icon"
+                  width={36}
+                  height={36}
+                  className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 object-contain rounded-xl"
+                  priority
+                />
+                <span
+                  className={`text-2xl sm:text-3xl font-black tracking-tight transition-colors ${
+                    scrolled ? "text-gray-900" : "text-white"
+                  }`}
+                >
+                  Cabeazy
+                </span>
+              </div>
+            </Link>
 
             {/* RIGHT SIDE GROUP: Nav Links + CTA Action Buttons */}
             <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-shrink-0">
               {/* Navigation Links */}
               <div className="flex items-center gap-5 xl:gap-6">
                 {navLinks.map((item) => (
-                  <a
+                  <Link
                     key={item.href}
                     href={item.href}
                     onClick={(e) => handleSmoothScroll(e, item.href)}
@@ -90,7 +103,7 @@ export default function Header() {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
@@ -113,7 +126,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-brandColor hover:bg-brandColor-hover text-white px-4 py-2 rounded-xl text-sm font-bold shadow-sm whitespace-nowrap btn-press transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brandColor"
-                  aria-label="Chat with CabEazy on WhatsApp"
+                  aria-label="Chat with Cabeazy on WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4 flex-shrink-0" />
                   <span>WhatsApp</span>
@@ -130,7 +143,7 @@ export default function Header() {
                     ? "border-gray-200 text-gray-900 bg-white"
                     : "border-white/30 text-white bg-white/10 backdrop-blur-sm"
                 }`}
-                aria-label="Call CabEazy"
+                aria-label="Call Cabeazy"
               >
                 <Phone className="w-4 h-4 text-brandColor" />
                 <span className="hidden sm:inline">Call</span>
@@ -140,7 +153,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:flex p-2 sm:px-3 sm:py-2 rounded-xl bg-brandColor text-white transition-all btn-press items-center gap-1.5 text-xs font-bold shadow-xs"
-                aria-label="WhatsApp CabEazy"
+                aria-label="WhatsApp Cabeazy"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span className="hidden sm:inline">WhatsApp</span>
@@ -173,9 +186,18 @@ export default function Header() {
           />
           <div className="relative bg-white rounded-t-3xl shadow-2xl p-6 z-10 animate-fade-in-up max-h-[85vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-4 border-b border-gray-100 mb-4">
-              <span className="text-xl font-black text-gray-900">
-                Cab<span className="text-brandColor">Eazy</span>
-              </span>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/images/logo-icon.png"
+                  alt="Cabeazy Logo Icon"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 flex-shrink-0 object-contain rounded-lg"
+                />
+                <span className="text-xl font-black text-gray-900">
+                  Cabeazy
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={closeMenu}
@@ -189,14 +211,14 @@ export default function Header() {
             {/* Mobile Nav Links */}
             <nav className="space-y-1 mb-6" aria-label="Mobile Navigation">
               {navLinks.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                   className="flex items-center px-3.5 py-3 rounded-xl text-base font-semibold text-gray-800 hover:bg-orange-50 hover:text-brandColor transition"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
 

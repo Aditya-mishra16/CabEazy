@@ -16,7 +16,7 @@ export default function Hero() {
 
   const handleWhatsAppEnquiry = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hi CabEazy, I would like to book a ${
+    const message = `Hi Cabeazy, I would like to book a ${
       tripType === "oneway" ? "One-Way" : "Round-Trip"
     } trip:\n- Pickup: ${pickup || "My Pickup Location"}\n- Destination: ${
       drop || "My Destination"
@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   const defaultWhatsAppUrl = getWhatsAppLink(
-    "Hi CabEazy, I want to check vehicle availability and get a quote for my trip."
+    "Hi Cabeazy, I want to check vehicle availability and get a quote for my trip."
   );
 
   // text-base ensures 16px on mobile (prevents iOS zoom); sm:text-sm reverts to 14px on sm+ screens
@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-highway.jpg"
-          alt="CabEazy Scenic Open Highway Journey"
+          alt="Cabeazy Scenic Open Highway Journey"
           fill
           priority
           sizes="100vw"
@@ -89,7 +89,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: EASE }}
             >
-              Tell us where you need to go, and CabEazy will match your trip with an experienced,
+              Tell us where you need to go, and Cabeazy will match your trip with an experienced,
               verified driver and a clean, comfortable vehicle. Enjoy punctual doorstep pickup,
               upfront clarity, and zero dynamic surge charges.
             </motion.p>

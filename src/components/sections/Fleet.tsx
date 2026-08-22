@@ -5,7 +5,7 @@ import { siteConfig, vehiclesData, getWhatsAppLink } from "@/config/site";
 
 export default function Fleet() {
   return (
-    <section id="fleet" className="py-20 md:py-28 bg-gray-50 border-t border-gray-200/80 scroll-mt-16">
+    <section id="fleet" className="pt-8 pb-16 md:pt-12 md:pb-24 bg-gray-50 border-t border-gray-200/80 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -25,7 +25,7 @@ export default function Fleet() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {vehiclesData.map((vehicle) => {
             const whatsappUrl = getWhatsAppLink(
-              `Hi CabEazy, I would like to check availability and get a quote for the ${vehicle.name} (${vehicle.category}).`
+              `Hi Cabeazy, I would like to check availability and get a quote for the ${vehicle.name} (${vehicle.category}).`
             );
 
             return (

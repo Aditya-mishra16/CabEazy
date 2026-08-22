@@ -3,7 +3,7 @@ import { Phone, MessageCircle } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
 
 export default function MobileFloatingBar() {
-  const whatsappUrl = getWhatsAppLink("Hi CabEazy, I would like to enquire about vehicle booking.");
+  const whatsappUrl = getWhatsAppLink("Hi Cabeazy, I would like to enquire about vehicle booking.");
 
   return (
     <div
@@ -17,7 +17,7 @@ export default function MobileFloatingBar() {
         <a
           href={`tel:${siteConfig.phone}`}
           className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-gray-900 bg-gray-50 border border-gray-200 active:bg-gray-100 hover:bg-gray-100 transition whitespace-nowrap btn-press"
-          aria-label={`Call CabEazy at ${siteConfig.phone}`}
+          aria-label={`Call Cabeazy at ${siteConfig.phone}`}
         >
           <Phone className="w-4 h-4 text-brandColor flex-shrink-0" />
           <span>Call Now</span>
@@ -27,7 +27,7 @@ export default function MobileFloatingBar() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-brandColor hover:bg-brandColor-hover active:bg-brandColor-hover transition whitespace-nowrap btn-press shadow-xs"
-          aria-label="Chat with CabEazy on WhatsApp"
+          aria-label="Chat with Cabeazy on WhatsApp"
         >
           <MessageCircle className="w-4 h-4 flex-shrink-0" />
           <span>WhatsApp</span>

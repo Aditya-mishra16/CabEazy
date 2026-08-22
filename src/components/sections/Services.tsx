@@ -57,7 +57,7 @@ function TiltCard({ children, className }: { children: React.ReactNode; classNam
 
 export default function Services() {
   return (
-    <section id="services" className="pt-6 md:pt-10 pb-20 md:pb-28 bg-white overflow-hidden scroll-mt-16">
+    <section id="services" className="pt-4 pb-12 md:pt-6 md:pb-16 bg-white overflow-hidden scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
@@ -76,7 +76,7 @@ export default function Services() {
             <span className="text-brandColor">Chauffeur Services</span>
           </h2>
           <p className="mt-4 text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            One-way intercity drops, city airport transfers, or full-day rentals — CabEazy arranges
+            One-way intercity drops, city airport transfers, or full-day rentals — Cabeazy arranges
             comfortable, clean rides with verified assigned chauffeurs for your destination.
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ export default function Services() {
           {servicesData.map((service, idx) => {
             const Icon = iconMap[service.iconName as keyof typeof iconMap] || MapPin;
             const whatsappUrl = getWhatsAppLink(
-              `Hi CabEazy, I would like to enquire about ${service.title}.`
+              `Hi Cabeazy, I would like to enquire about ${service.title}.`
             );
 
             return (

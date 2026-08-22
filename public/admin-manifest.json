@@ -1,7 +1,7 @@
 {
-  "name": "CabEazy Admin",
-  "short_name": "CabEazy",
-  "description": "CabEazy Admin Dashboard – Manage enquiries and customer leads",
+  "name": "Cabeazy Admin",
+  "short_name": "Cabeazy",
+  "description": "Cabeazy Admin Dashboard – Manage enquiries and customer leads",
   "start_url": "/admin",
   "display": "standalone",
   "background_color": "#0a0a0a",

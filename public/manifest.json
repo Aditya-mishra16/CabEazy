@@ -1,20 +1,19 @@
 {
-  "name": "Cab Admin Dashboard",
-  "short_name": "CabAdmin",
-  "start_url": "/admin",
+  "name": "Cabeazy",
+  "short_name": "Cabeazy",
+  "description": "Book reliable and affordable cabs with Cabeazy. Convenient cab booking for local, airport and outstation travel.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#F15533",
+  "orientation": "portrait-primary",
+  "categories": ["travel", "utility"],
   "icons": [
     {
-      "src": "/images/JobsBanner.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/Mini.png",
+      "src": "/images/logo-icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

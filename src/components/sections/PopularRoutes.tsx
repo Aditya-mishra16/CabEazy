@@ -4,7 +4,7 @@ import { routesData, getWhatsAppLink, siteConfig } from "@/config/site";
 
 export default function PopularRoutes() {
   return (
-    <section id="routes" className="py-20 md:py-28 bg-white">
+    <section id="routes" className="pt-8 pb-14 md:pt-12 md:pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -24,7 +24,7 @@ export default function PopularRoutes() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {routesData.map((route) => {
             const whatsappUrl = getWhatsAppLink(
-              `Hi CabEazy, I want to book a cab from ${route.from} to ${route.to}. Please share vehicle availability and quote.`
+              `Hi Cabeazy, I want to book a cab from ${route.from} to ${route.to}. Please share vehicle availability and quote.`
             );
 
             return (
@@ -107,7 +107,7 @@ export default function PopularRoutes() {
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <a
-              href={getWhatsAppLink("Hi CabEazy, I have a custom route enquiry. Please help with quote.")}
+              href={getWhatsAppLink("Hi Cabeazy, I have a custom route enquiry. Please help with quote.")}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brandColor hover:bg-brandColor-hover text-white px-6 py-3 rounded-xl text-sm font-bold shadow-sm btn-press transition"
