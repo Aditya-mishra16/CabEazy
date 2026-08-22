@@ -78,8 +78,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.2, ease: EASE }}
             >
-              Book a Vehicle for{" "}
-              <span className="text-brandColor">Your Journey</span>
+              Book Your Cab with{" "}
+              <span className="text-brandColor">Cabeazy</span>
             </motion.h1>
 
             {/* Supporting Copy */}
@@ -158,10 +158,10 @@ export default function Hero() {
                   <span>Verified Drivers &bull; 24/7 Available</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
-                  Get an Instant <span className="text-brandColor">Quote</span>
+                  Book Your Cab with <span className="text-brandColor">Cabeazy</span>
                 </h1>
-                <p className="text-xs text-gray-500 mt-1">
-                  Tell us where you need to go for fast driver assignment
+                <p className="text-xs text-gray-500 mt-1.5">
+                  Get an instant quote and fast driver assignment
                 </p>
               </div>
 

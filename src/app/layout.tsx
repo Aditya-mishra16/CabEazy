@@ -22,13 +22,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://www.cabeazy.in"),
   title: {
-    default: "CabEazy — Best Cab Booking, Outstation Taxi & Chauffeur Services",
-    template: "%s | CabEazy",
+    default: "Cabeazy - Cab Booking Service",
+    template: "%s | Cabeazy",
   },
   description:
-    "Book a vehicle for your journey with CabEazy. Tell us where you need to go, and we will assign an experienced, verified driver to take you to your destination. Hatchbacks, Sedans, SUVs, and Premium vehicles. Available 24/7. Call or WhatsApp +91 9323913610.",
+    "Book reliable and affordable cabs with Cabeazy. Convenient cab booking for local, airport and outstation travel.",
   keywords: [
     "CabEazy",
     "Cab Booking",
@@ -52,15 +52,15 @@ export const metadata: Metadata = {
   creator: "CabEazy",
   publisher: "CabEazy",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.cabeazy.in/",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteConfig.url,
-    title: "CabEazy — Best Cab Booking, Outstation Taxi & Chauffeur Services",
+    url: "https://www.cabeazy.in",
+    title: "Cabeazy - Cab Booking Service",
     description:
-      "Book a vehicle for your journey with CabEazy. We arrange your ride and assign an experienced, verified driver to take you safely to your destination. Available 24/7.",
+      "Book reliable and affordable cabs with Cabeazy. Convenient cab booking for local, airport and outstation travel.",
     siteName: siteConfig.name,
     images: [
       {
@@ -73,9 +73,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CabEazy — Vehicle Booking & Driver Assignment",
+    title: "Cabeazy - Cab Booking Service",
     description:
-      "Tell us your destination and CabEazy will assign a verified driver with a clean, comfortable vehicle for your trip. Available 24/7.",
+      "Book reliable and affordable cabs with Cabeazy. Convenient cab booking for local, airport and outstation travel.",
     images: ["/images/hero-highway.jpg"],
   },
   robots: {
