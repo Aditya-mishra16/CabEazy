@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import {
   Phone,
   Mail,
@@ -13,6 +14,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { siteConfig, getWhatsAppLink } from "@/config/site";
+
+const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -134,9 +137,9 @@ export default function Contact() {
     setErrorMsg("");
   };
 
-  // Normalized input styling for cross-browser / macOS consistency
+  // Normalized input styling — text-[16px] prevents iOS Safari / Android Chrome zoom on focus
   const inputClass =
-    "w-full h-[48px] px-4 py-3 rounded-xl border border-gray-200 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition bg-white";
+    "w-full h-[48px] px-4 py-3 rounded-xl border border-gray-200 text-[16px] sm:text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition bg-white";
 
   const labelClass =
     "block text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5";
@@ -149,7 +152,13 @@ export default function Contact() {
     <section id="contact" className="py-20 md:py-28 bg-gray-50 border-t border-gray-200/80 scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-14"
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: EASE }}
+        >
           <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-brandColor mb-2">
             Get in Touch
           </p>
@@ -159,12 +168,18 @@ export default function Contact() {
           <p className="mt-4 text-base text-gray-600 leading-relaxed">
             Tell us where you need to go. Fill out the booking enquiry form below or connect with us directly via Phone or WhatsApp.
           </p>
-        </div>
+        </motion.div>
 
         {/* 2-COLUMN ALIGNED LAYOUT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 lg:items-stretch">
           {/* LEFT COLUMN: Quick Contact Cards + Location Map */}
-          <div className="lg:col-span-5 flex flex-col space-y-4">
+          <motion.div
+            className="lg:col-span-5 flex flex-col space-y-4"
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.65, ease: EASE }}
+          >
             {/* Quick contact card: Phone */}
             <a
               href={`tel:${siteConfig.phone}`}
@@ -260,10 +275,16 @@ export default function Contact() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT COLUMN: Enquiry Form with Aligned Matching Height */}
-          <div className="lg:col-span-7 flex flex-col">
+          <motion.div
+            className="lg:col-span-7 flex flex-col"
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.65, delay: 0.1, ease: EASE }}
+          >
             <div className="bg-white rounded-3xl border border-gray-200 shadow-sm p-7 sm:p-9 flex-1 flex flex-col justify-between">
               {status === "success" ? (
                 /* SUCCESS STATE */
@@ -375,7 +396,7 @@ export default function Contact() {
                             name="service"
                             value={formData.service}
                             onChange={handleChange}
-                            className="w-full h-[48px] px-4 py-3 rounded-xl border border-gray-200 text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition bg-white appearance-none pr-10 cursor-pointer disabled:opacity-60"
+                            className="w-full h-[48px] px-4 py-3 rounded-xl border border-gray-200 text-[16px] sm:text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition bg-white appearance-none pr-10 cursor-pointer disabled:opacity-60"
                             disabled={status === "loading"}
                           >
                             <option value="">Select a service</option>
@@ -399,7 +420,7 @@ export default function Contact() {
                             name="vehicleClass"
                             value={formData.vehicleClass}
                             onChange={handleChange}
-                            className="w-full h-[48px] px-4 py-3 rounded-xl border border-gray-200 text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition bg-white appearance-none pr-10 cursor-pointer disabled:opacity-60"
+                            className="w-full h-[48px] px-4 py-3 rounded-xl border border-gray-200 text-[16px] sm:text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition bg-white appearance-none pr-10 cursor-pointer disabled:opacity-60"
                             disabled={status === "loading"}
                           >
                             <option value="">Select vehicle class</option>
@@ -524,7 +545,7 @@ export default function Contact() {
                 </div>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

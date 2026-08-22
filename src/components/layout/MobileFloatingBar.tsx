@@ -7,13 +7,16 @@ export default function MobileFloatingBar() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-gray-200 shadow-[0_-4px_24px_rgba(0,0,0,0.08)]"
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/80 shadow-[0_-4px_24px_rgba(0,0,0,0.06)] flex items-center px-4"
+      style={{
+        paddingBottom: "calc(10px + env(safe-area-inset-bottom))",
+        paddingTop: "10px",
+      }}
     >
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-3 w-full">
         <a
           href={`tel:${siteConfig.phone}`}
-          className="flex items-center justify-center gap-2.5 py-4 text-sm font-bold text-gray-900 bg-white hover:bg-gray-50 border-r border-gray-200 active:bg-gray-100 transition"
+          className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-gray-900 bg-gray-50 border border-gray-200 active:bg-gray-100 hover:bg-gray-100 transition whitespace-nowrap btn-press"
           aria-label={`Call CabEazy at ${siteConfig.phone}`}
         >
           <Phone className="w-4 h-4 text-brandColor flex-shrink-0" />
@@ -23,7 +26,7 @@ export default function MobileFloatingBar() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2.5 py-4 text-sm font-bold text-white bg-brandColor hover:bg-brandColor-hover active:bg-brandColor-hover transition"
+          className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-brandColor hover:bg-brandColor-hover active:bg-brandColor-hover transition whitespace-nowrap btn-press shadow-xs"
           aria-label="Chat with CabEazy on WhatsApp"
         >
           <MessageCircle className="w-4 h-4 flex-shrink-0" />

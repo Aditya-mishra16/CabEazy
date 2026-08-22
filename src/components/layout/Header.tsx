@@ -125,7 +125,7 @@ export default function Header() {
             <div className="flex items-center gap-2 lg:hidden flex-shrink-0">
               <a
                 href={`tel:${siteConfig.phone}`}
-                className={`p-2 sm:px-3 sm:py-2 rounded-xl border transition-all btn-press flex items-center gap-1.5 text-xs font-semibold ${
+                className={`hidden sm:flex p-2 sm:px-3 sm:py-2 rounded-xl border transition-all btn-press items-center gap-1.5 text-xs font-semibold ${
                   scrolled
                     ? "border-gray-200 text-gray-900 bg-white"
                     : "border-white/30 text-white bg-white/10 backdrop-blur-sm"
@@ -139,7 +139,7 @@ export default function Header() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 sm:px-3 sm:py-2 rounded-xl bg-brandColor text-white transition-all btn-press flex items-center gap-1.5 text-xs font-bold shadow-xs"
+                className="hidden sm:flex p-2 sm:px-3 sm:py-2 rounded-xl bg-brandColor text-white transition-all btn-press items-center gap-1.5 text-xs font-bold shadow-xs"
                 aria-label="WhatsApp CabEazy"
               >
                 <MessageCircle className="w-4 h-4" />

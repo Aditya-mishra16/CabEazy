@@ -172,7 +172,7 @@ export default function ScrollProgressCar() {
 
       {/* 2. MOBILE ONLY: ULTRA-COMPACT FLOATING PILL (Never blocks content) */}
       <div
-        className={`fixed bottom-20 right-3 z-40 flex md:hidden items-center gap-1.5 transition-all duration-300 ${
+        className={`fixed bottom-[calc(80px+env(safe-area-inset-bottom))] right-3 z-40 flex md:hidden items-center gap-1.5 transition-all duration-300 ${
           isVisible
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-4 pointer-events-none"

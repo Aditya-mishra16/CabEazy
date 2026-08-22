@@ -22,6 +22,26 @@
   }
 }
 
+/* ============================================================
+   MOBILE INPUT ZOOM PREVENTION
+   iOS Safari and Android Chrome auto-zoom when font-size < 16px.
+   This fixes it without disabling user zoom globally.
+   Only applies on mobile (< 640px = below Tailwind's sm: breakpoint).
+   ============================================================ */
+@media (max-width: 639px) {
+  input,
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -86,6 +106,25 @@
   }
 }
 
+/* Step connector line animation */
+@keyframes growRight {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes growDown {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+.animate-grow-right {
+  animation: growRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-grow-down {
+  animation: growDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -117,6 +156,16 @@
 
 .btn-press:active {
   transform: scale(0.97);
+}
+
+/* 3D Card Tilt Helper */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.card-3d-inner {
+  transform: translateZ(8px);
 }
 
 /* Accessibility: Respect Reduced Motion */

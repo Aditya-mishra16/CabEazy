@@ -6,8 +6,8 @@ export const siteConfig = {
   description:
     "Book a vehicle for your journey with CabEazy. Tell us where you need to go, and we will assign an experienced, verified driver to take you safely to your destination. Available 24/7.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.cabeazy.com",
-  phone: process.env.NEXT_PUBLIC_PHONE_NUMBER || "+919082251160",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919082251160",
+  phone: process.env.NEXT_PUBLIC_PHONE_NUMBER || "+919323913610",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919323913610",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "cabeazy.travel@gmail.com",
   address: {
     street: "Mumbai-400072",
@@ -226,7 +226,7 @@ export const faqsData: FAQItem[] = [
   {
     question: "How can I contact CabEazy if I need assistance?",
     answer:
-      "Our human support desk is available 24/7 via direct phone call (+91 9082251160) and WhatsApp for immediate travel coordination.",
+      "Our human support desk is available 24/7 via direct phone call (+91 9323913610) and WhatsApp for immediate travel coordination.",
   },
 ];
 
