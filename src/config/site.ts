@@ -5,10 +5,10 @@ export const siteConfig = {
   legalName: "CabEazy Travel Services",
   description:
     "Book a vehicle for your journey with CabEazy. Tell us where you need to go, and we will assign an experienced, verified driver to take you safely to your destination. Available 24/7.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.cabeazy.com",
-  phone: process.env.NEXT_PUBLIC_PHONE_NUMBER || "+919323913610",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919323913610",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "cabeazy.travel@gmail.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL!,
+  phone: process.env.NEXT_PUBLIC_PHONE_NUMBER!,
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER!,
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL!,
   address: {
     street: "Mumbai-400072",
     city: "Mumbai",

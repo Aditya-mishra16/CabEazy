@@ -76,7 +76,7 @@ export default function AdminLoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@cabeazy.com"
+                placeholder="admin@cabeazy.in"
                 disabled={loading}
                 className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder:text-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-brandColor focus:border-transparent transition disabled:opacity-50"
               />
